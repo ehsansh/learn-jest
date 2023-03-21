@@ -21,4 +21,27 @@ describe('truthy and falsey', () => {
         const n = null;
         expect(n).not.toBeTruthy();
     });
+    it('check to be null', () => {
+        const n = null;
+        expect(n).toBeNull();
+    });
+});
+
+describe('numbers', () => {
+    it('greater', () => {
+        const val = sum(4, 5);
+        expect(val).toBeGreaterThan(8);
+    });
+    it('greater or equal', () => {
+        const val = sum(4, 5);
+        expect(val).toBeGreaterThanOrEqual(9);
+    });
+    it('less than', () => {
+        const val = sum(4, 5);
+        expect(val).toBeLessThan(10);
+    });
+    it('less than or equal', () => {
+        const val = sum(4, 5);
+        expect(val).toBeLessThanOrEqual(9);
+    });
 });
