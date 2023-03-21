@@ -45,3 +45,9 @@ describe('numbers', () => {
         expect(val).toBeLessThanOrEqual(9);
     });
 });
+
+describe('strings', () => {
+    it('I is not in team', () => {
+        expect('team').not.toMatch(/I/);
+    });
+});
