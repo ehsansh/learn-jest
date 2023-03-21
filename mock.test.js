@@ -1,3 +1,23 @@
+const axios = require('axios');
+
+const fetchData = async id => {
+    const results = await axios.get(
+        `https://jsonplaceholder.typicode.com/todos/${id}`
+    );
+    return results.data;
+};
+
+it('mock axios', async () => {
+    jest.spyOn(axios, 'get').mockReturnValueOnce({
+        data: {
+            id: 1,
+            todo: 'study',
+        },
+    });
+    const results = await fetchData();
+    expect(results.todo).toBe('study');
+});
+
 const forEach = (items, callBack) => {
     for (let i = 0; i < items.length; i++) callBack(items[i]);
 };
