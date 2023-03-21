@@ -58,3 +58,13 @@ describe('arrays', () => {
         expect(list).toContain('books');
     });
 });
+
+function compile() {
+    throw Error('something wrong happend');
+}
+
+describe('exception', () => {
+    it('compiles', () => {
+        expect(() => compile()).toThrow();
+    });
+});
