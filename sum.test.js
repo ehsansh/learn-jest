@@ -11,3 +11,14 @@ describe('example tests', () => {
         expect(obj).toEqual({});
     });
 });
+
+describe('truthy and falsey', () => {
+    it('null', () => {
+        const n = null;
+        expect(n).toBeFalsy();
+    });
+    it('null another way', () => {
+        const n = null;
+        expect(n).not.toBeTruthy();
+    });
+});
