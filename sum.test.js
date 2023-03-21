@@ -51,3 +51,10 @@ describe('strings', () => {
         expect('team').not.toMatch(/I/);
     });
 });
+
+describe('arrays', () => {
+    it('containt array item', () => {
+        const list = ['books', 'icons', 'doors', 'songs'];
+        expect(list).toContain('books');
+    });
+});
